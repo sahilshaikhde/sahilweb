@@ -1,185 +1,48 @@
-<!-- Save this as index.html and open in browser -->
-<!doctype html>
-<html lang="ur">
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Meri Pehli Website</title>
-  <style>
-    /* Basic reset & layout */
-    :root{
-      --accent:#0b78d1;
-      --bg:#f7f9fc;
-      --card:#ffffff;
-      --text:#0b2135;
-      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.5;
-      direction: rtl; /* Urdu direction */
-    }
-
-    header{
-      background:linear-gradient(90deg,var(--accent),#1aa1ff);
-      color:white;
-      padding:18px 20px;
-      display:flex;
-      gap:20px;
-      align-items:center;
-      justify-content:space-between;
-    }
-    .logo{font-weight:700;font-size:20px;}
-    nav a{
-      color:white;text-decoration:none;margin-left:12px;
-      font-weight:600;
-    }
-    .container{max-width:1000px;margin:30px auto;padding:0 16px;}
-
-    /* Hero */
-    .hero{
-      display:flex;
-      gap:24px;
-      align-items:center;
-      justify-content:space-between;
-      flex-wrap:wrap;
-    }
-    .hero .text{flex:1;min-width:220px}
-    .hero h1{margin:0 0 8px 0;font-size:28px;}
-    .hero p{margin:0 0 12px 0;opacity:0.9}
-    .btn{
-      display:inline-block;
-      background:var(--accent);
-      color:white;padding:10px 16px;border-radius:8px;
-      text-decoration:none;font-weight:700;
-    }
-
-    /* Cards */
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:22px}
-    .card{background:var(--card);padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(13,40,70,0.06);}
-
-    /* Contact */
-    form{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(13,40,70,0.06);}
-    label{display:block;margin:8px 0 6px}
-    input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e3e7ee}
-    textarea{min-height:100px;resize:vertical}
-
-    footer{text-align:center;padding:16px;color:#50606f;margin-top:28px;opacity:0.9}
-
-    /* Responsive tweaks */
-    @media (max-width:600px){
-      .hero h1{font-size:22px}
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MeriWebsite</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-  <header>
-    <div class="logo">MeriWebsite</div>
-    <nav>
-      <a href="#home">گھر</a>
-      <a href="#features">خصوصیات</a>
-      <a href="#contact">رابطہ کریں</a>
-    </nav>
-  </header>
+  <header>MeriWebsite</header>
 
-  <main class="container">
-    <section id="home" class="hero">
-      <div class="text">
-        <h1>Assalamualaikum — mera pehla web page</h1>
-        <p>Yeh simple website template hai jisse tum seekh sakte ho: HTML (structure), CSS (style), aur JavaScript (interaction).</p>
-        <a class="btn" href="#contact">مجھ سے رابطہ کریں</a>
-      </div>
-      <div style="min-width:200px">
-        <div class="card">
-          <strong>کچھ بنیادی چیزیں</strong>
-          <p style="margin:8px 0 0">Save karo as <code>index.html</code> aur browser mein open karo. Edit karne ke liye Notepad, VSCode, ya kisi editor ka istemal karo.</p>
-        </div>
-      </div>
-    </section>
+  <nav>
+    <a href="#">گھر</a>
+    <a href="#">خصوصیات</a>
+    <a href="#">رابطہ کریں</a>
+  </nav>
 
-    <section id="features">
-      <h2 style="margin-top:28px">خاص فیچرز</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>ریسپانسیو</h3>
-          <p>Screen choti ho ya badi — layout adjust ho jayega.</p>
-        </div>
-        <div class="card">
-          <h3>فارم ویلیڈیشن</h3>
-          <p>Contact form JavaScript se check karta hai ke naam aur message bhare huay hain.</p>
-        </div>
-        <div class="card">
-          <h3>آسانی سے تبدیل کریں</h3>
-          <p>Colors, text, aur sections ko asani se badal sakte ho.</p>
-        </div>
-      </div>
-    </section>
+  <section>
+    <h2>Assalamualaikum — mera pehla web page</h2>
+    <p>
+      Yeh simple website template hai jisse tum seekh sakte ho: HTML (structure),
+      CSS (style), aur JavaScript (interaction).
+    </p>
 
-    <section id="contact" style="margin-top:26px">
-      <h2>رابطہ فارم</h2>
-      <form id="contactForm" onsubmit="return false;">
-        <label for="name">نام</label>
-        <input id="name" type="text" placeholder="آپ کا نام" />
+    <h3>مجھ سے رابطہ کریں</h3>
+    <p>کچھ بنیادی چیزیں</p>
 
-        <label for="email">ای میل (اختیاری)</label>
-        <input id="email" type="email" placeholder="example@mail.com" />
+    <form>
+      <label>نام:</label><br>
+      <input type="text" placeholder="آپ کا نام"><br><br>
 
-        <label for="message">پیغام</label>
-        <textarea id="message" placeholder="اپنا پیغام لکھیں"></textarea>
+      <label>ای میل (اختیاری):</label><br>
+      <input type="email" placeholder="example@mail.com"><br><br>
 
-        <div style="margin-top:12px;display:flex;gap:10px">
-          <button class="btn" onclick="submitForm()">بھیجیں</button>
-          <button type="button" onclick="clearForm()" style="background:#e6eef8;border-radius:8px;padding:10px 14px;border:0">صاف کریں</button>
-        </div>
+      <label>پیغام:</label><br>
+      <textarea placeholder="اپنا پیغام لکھیں"></textarea><br><br>
 
-        <p id="formMsg" style="margin-top:10px"></p>
-      </form>
-    </section>
+      <button type="submit">بھیجیں</button>
+      <button type="reset">صاف کریں</button>
+    </form>
+  </section>
 
-    <footer>
-      © <span id="year"></span> MeriWebsite — Sikho aur Banayo
-    </footer>
-  </main>
+  <footer>© 2025 MeriWebsite — Sikho aur Banao</footer>
 
-  <script>
-    // Dynamic year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Simple form validation + fake submit
-    function submitForm(){
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-      const out = document.getElementById('formMsg');
-
-      if(!name){
-        out.style.color='crimson';
-        out.textContent = 'براہِ کرم اپنا نام لکھیں۔';
-        return;
-      }
-      if(!message){
-        out.style.color='crimson';
-        out.textContent = 'براہِ کرم پیغام لکھیں۔';
-        return;
-      }
-
-      // Simulate sending (in real site you'd POST to server or use an API)
-      out.style.color='green';
-      out.textContent = 'آپ کا پیغام بھیج دیا گیا—شکریہ! (یہ صرف نمونہ ہے)';
-      // Reset fields after success
-      setTimeout(clearForm, 1500);
-    }
-
-    function clearForm(){
-      document.getElementById('name').value='';
-      document.getElementById('email').value='';
-      document.getElementById('message').value='';
-      document.getElementById('formMsg').textContent='';
-    }
-  </script>
 </body>
 </html>
